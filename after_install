@@ -1,0 +1,24 @@
+
+yay -S polybar git rofi 
+
+
+#appearence	
+yay -S --noconfirm lxappearence feh ant-dracula-theme-git paper-icon-theme
+yay -S ttf-liberation ttf-dejavu ttf-font-awesome
+
+#config
+git clone https://github.com/pschervakov/dots ~/.myconf
+
+rm -r ~/.config/i3  ~/.
+ln -s ~/.myconf/i3  ~/.config/
+
+chmod ugo+x ~/.myconf/polybar/launch.sh
+ln -s ~/.myconf/polybar  ~/.config/
+
+ln -sf ~/.myconf/zsh/.zshrc ~/.zshrc     
+ln -s ~/.myconf/zsh/zsh ~/.zsh
+
+ln -s ~/.myconf/rofi/ ~/.config/rofi/
+
+sudo mv ~/.config/rofi/slate.rasi /usr/share/rofi/themes/
+

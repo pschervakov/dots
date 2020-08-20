@@ -32,9 +32,7 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -178,9 +176,8 @@ bindsym $mod+r mode "resize"
 #autostart
 
 exec_always --no-startup-id /home/philip/.config/polybar/launch.sh
-exec --no-startup-id feh --bg-scale ~/Downloads/backgrounds/Light\ mode\ JPEG.jpg
+exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Light\ mode\ JPEG.jpg
 exec --no-startup-id volumeicon
-exec --no-startup-id nm-applet
 #exec --no-startup-id compton
 
 #borders and titlebar
@@ -191,7 +188,8 @@ hide_edge_borders smart
 client.focused          #ffffff #ffffff #ffffff #ff79c6  #ff79c6
 
 #gaps
-workspace 2 gaps inner 6
+gaps inner 6
+smart_gaps on
 
 #dialog windows
 
