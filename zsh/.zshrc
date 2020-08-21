@@ -23,3 +23,7 @@ setopt no_list_ambiguous
 alias ls='ls --color'
 alias cp="cp -i" 
 la() { setsid $1 &>/dev/null ;}
+
+#history
+bindkey '^[k' history-beginning-search-backward 
+bindkey '^[j' history-beginning-search-forward  
