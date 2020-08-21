@@ -3,7 +3,7 @@ yay -S polybar git rofi
 
 
 #appearence	
-yay -S --noconfirm lxappearence feh ant-dracula-theme-git paper-icon-theme
+yay -S --noconfirm lxappearence feh ant-dracula-theme-git 
 yay -S ttf-liberation ttf-dejavu ttf-font-awesome
 
 #config
