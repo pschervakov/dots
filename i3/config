@@ -153,7 +153,10 @@ bindsym $mod+s scratchpad show
 
 #screenshot
 bindsym Print exec maim -u | xclip -selection clipboard -t image/png -i
-bindsym Shift+Print exec maim -s -u | xclip -selection clipboard -t image/png -i
+bindsym Shift+Print exec maim -s -u -b 2 | xclip -selection clipboard -t image/png -i
+
+bindsym Ctrl+Print exec maim -u ~/Pictures/$(date +%F-%T).png
+bindsym Ctrl+Shift+Print exec maim -s -u -b 2 ~/Pictures/$(date +%F-%T).png
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -186,7 +189,7 @@ bindsym $mod+r mode "resize"
 
 exec_always --no-startup-id /home/philip/.config/polybar/launch.sh
 exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Light\ mode\ JPEG.jpg
-exec --no-startup-id volumeicon
+exec --no-startup-id  pa-applet
 #exec --no-startup-id compton
 
 #borders and titlebar
