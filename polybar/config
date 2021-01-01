@@ -1,4 +1,3 @@
-
 [colors]
 
 background = #17171E
@@ -159,8 +158,8 @@ label-font = 6
 
 [module/battery]
 type = internal/battery
-battery = BAT1
-adapter = ADP1
+battery = BATT
+adapter = ACAD
 full-at = 102
 label-charging =   %percentage%%
 format-charging = <label-charging>

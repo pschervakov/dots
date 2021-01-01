@@ -1,10 +1,13 @@
 * {
-  background-color: #282C33;
+  background-color:#191c23;
   border-color: #2e343f;
-  text-color: #8ca0aa;
+  text-color: #fff;
   spacing: 0;
   width: 512px;
   height:300px;
+  location: north west;
+  y-offset:30px;   
+  
 }
 
 inputbar {
@@ -35,7 +38,6 @@ listview {
 }
 
 element {
-  border: 0 0 1px 0;
   padding: 16px;
 }
 
